@@ -11,7 +11,7 @@ export const placeholderData = {
   ],
 
   //HERO SECTION
-  heroVideoUrl: "https://cdn.pixabay.com/video/2022/05/23/117804-713302202_large.mp4",
+  heroVideoUrl: "https://cdn.pixabay.com/video/2022/12/10/142363-780562112_large.mp4",
   heroTitle: "Empowering Intelligence-Driven Defense Systems",
   heroSubtitle: "Innovative solutions for integrated electronic defense technologies",
 
