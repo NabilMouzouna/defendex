@@ -3,9 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, Maximize, Minimize, SkipBack, SkipForward } from 'lucide-react';
-import { fadeInUp } from '@/lib/animations/variants';
-
-export const Presentation = () => {
+import { placeholderData } from '@/lib/data/placeholder'; 
+export function Presentation() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -16,7 +15,9 @@ export const Presentation = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const controlsTimeoutRef = useRef<NodeJS.Timeout>();
 
-  const videoUrl = "https://cdn.pixabay.com/video/2019/10/10/27725-365890983_large.mp4";
+  
+  const { presentationTitle, presentationDescription, presentationVideoUrl } = placeholderData; 
+  const videoUrl = presentationVideoUrl;
 
   useEffect(() => {
     const video = videoRef.current;
@@ -105,42 +106,66 @@ export const Presentation = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      variants={fadeInUp}
-      className="relative w-full bg-black"
+      className="relative w-full bg-white"
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setShowControls(false)}
     >
+      {/* Introductory Text */}
+      <div className="py-20 text-center">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-4xl font-bold mb-6 text-gray-800"
+          >
+            {presentationTitle}
+          </motion.h2>
+          <motion.p
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="text-lg text-gray-600  mx-auto mb-12"
+          >
+            {presentationDescription}
+          </motion.p>
+        </div>
+      </div>
+
+      {/* Video Section */}
       <div className="aspect-w-16 aspect-h-9 w-full">
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
           onClick={togglePlay}
+          autoPlay
           muted={isMuted}
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
       </div>
 
+      {/* Video Controls */}
       <AnimatePresence>
         {showControls && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"
+            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4"
           >
             {/* Progress Bar */}
             <div
-              className="w-full h-1 bg-white/30 rounded-full mb-4 cursor-pointer"
+              className="w-full h-1 bg-gray-300 rounded-full mb-4 cursor-pointer"
               onClick={handleProgressClick}
             >
               <motion.div
-                className="h-full bg-white rounded-full relative"
+                className="h-full bg-blue-600 rounded-full relative"
                 style={{ width: `${progress}%` }}
                 layoutId="progress"
               >
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg" />
+                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-blue-600 rounded-full shadow-lg" />
               </motion.div>
             </div>
 
@@ -151,7 +176,7 @@ export const Presentation = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={togglePlay}
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white"
+                  className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800"
                 >
                   {isPlaying ? <Pause size={24} /> : <Play size={24} />}
                 </motion.button>
@@ -159,7 +184,7 @@ export const Presentation = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={toggleMute}
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white"
+                  className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800"
                 >
                   {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
                 </motion.button>
@@ -174,7 +199,7 @@ export const Presentation = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => skipTime(-10)}
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white"
+                  className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800"
                 >
                   <SkipBack size={24} />
                 </motion.button>
@@ -182,7 +207,7 @@ export const Presentation = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => skipTime(10)}
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white"
+                  className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800"
                 >
                   <SkipForward size={24} />
                 </motion.button>
@@ -193,7 +218,7 @@ export const Presentation = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={toggleFullscreen}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white"
+                className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-800"
               >
                 {isFullscreen ? <Minimize size={24} /> : <Maximize size={24} />}
               </motion.button>
@@ -203,4 +228,4 @@ export const Presentation = () => {
       </AnimatePresence>
     </motion.section>
   );
-};
+}

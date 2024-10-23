@@ -1,4 +1,5 @@
 export const placeholderData = {
+  // NAVIGATION BAR
   companyName: "SHOGHI",
   navItems: [
     { label: "About", href: "/about", hasSubmenu: true },
@@ -8,9 +9,18 @@ export const placeholderData = {
     { label: "Support", href: "/support" },
     { label: "Reach Us", href: "/contact" },
   ],
-  heroVideoUrl: "https://example.com/hero-video.mp4",
+
+  //HERO SECTION
+  heroVideoUrl: "https://cdn.pixabay.com/video/2022/05/23/117804-713302202_large.mp4",
   heroTitle: "Empowering Intelligence-Driven Defense Systems",
   heroSubtitle: "Innovative solutions for integrated electronic defense technologies",
+
+  //Domains & Solutions SECTION 
+  presentationTitle: "Domains & Solutions",
+  presentationDescription: "Shoghi is at the forefront of developing cutting-edge defense systems, platforms, and products tailored to meet the critical needs of national security and communication requirements across Land, Air, Water, and Underwater domains. Our specialization lies in creating innovative solutions in areas where technological advances can have a game-changing effect.",
+  presentationVideoUrl: "https://cdn.pixabay.com/video/2019/10/10/27725-365890983_large.mp4",
+
+  // Why Us SECTION
   whyUsContent: {
     title: "Why Us",
     description: "Around the world the Military, Defence forces and Intelligence agencies of more than seventy countries reach out for Shoghi when it comes to integrated electronic defense technologies, products and systems.",
@@ -37,6 +47,8 @@ export const placeholderData = {
       },
     ],
   },
+
+  // GLOBAL PRESENCE SECTION
   globalPresence: {
     title: "Global Presence",
     stats: [
@@ -67,6 +79,8 @@ export const placeholderData = {
       imageUrl: "https://example.com/product3.jpg",
     },
   ],
+
+  //FOOTER SECTION
   footerAbout: "SHOGHI is a leading provider of intelligence-driven defense systems, dedicated to empowering global security through innovative technology.",
   footerLinks: [
     { label: "Privacy Policy", href: "/privacy" },
