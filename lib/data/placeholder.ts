@@ -3,7 +3,7 @@ export const placeholderData = {
   // NAVIGATION BAR
   companyName: "SHOGHI",
   navItems: [
-    { label: "About", href: "/about", hasSubmenu: true },
+    { label: "About", href: "/about"},
     { label: "Products", href: "/products", hasSubmenu: true },
     // { label: "Media Space", href: "/media-space" },
     // { label: "Careers", href: "/careers" },
@@ -62,26 +62,6 @@ export const placeholderData = {
       { value: "135+", label: "Product Portfolio" },
     ],
   },
-  products: [
-    {
-      id: 1,
-      name: "High Resolution Imaging Solutions",
-      description: "Advanced satellite imaging for precise intelligence gathering.",
-      imageUrl: "https://example.com/product1.jpg",
-    },
-    {
-      id: 2,
-      name: "Communication Security",
-      description: "Robust encryption and device security for sensitive communications.",
-      imageUrl: "https://example.com/product2.jpg",
-    },
-    {
-      id: 3,
-      name: "Border Surveillance Systems",
-      description: "Cutting-edge technology for comprehensive border protection.",
-      imageUrl: "https://example.com/product3.jpg",
-    },
-  ],
 
   //FOOTER SECTION
   footerAbout: "SHOGHI is a leading provider of intelligence-driven defense systems, dedicated to empowering global security through innovative technology.",

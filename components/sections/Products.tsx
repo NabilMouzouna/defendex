@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { placeholderData } from '@/lib/data/placeholder';
+import { Products as ProductsList } from '@/lib/data/productsList';
 import { scaleIn, staggerContainer } from '@/lib/animations/variants';
 
 export const Products = () => {
@@ -27,7 +27,7 @@ export const Products = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {placeholderData.products.map((product, index) => (
+          {ProductsList.map((product, index) => (
             <motion.div
               key={index}
               variants={scaleIn}
