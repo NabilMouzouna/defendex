@@ -43,7 +43,7 @@ export const Navbar = () => {
         backdropFilter: 'blur(10px)',
       }}
     >
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-[#eeeeee]">
             {placeholderData.companyName}
@@ -74,7 +74,7 @@ export const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="text-[#eeeeee] hover:text-[#979797] transition-colors flex items-center"
+                    className="text-[#eeeeee] py-4 hover:text-[#979797] transition-colors flex items-center"
                   >
                     {item.label}
                     {item.hasSubmenu && (
@@ -92,14 +92,14 @@ export const Navbar = () => {
                     exit="closed"
                     className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 backdrop-blur-md rounded-md shadow-lg"
                   >
-                    <div className="py-2">
-                      <Link href="#" className="block px-4 py-2 text-[#eeeeee] hover:bg-[#333]">
+                    <div className="py-2 -translate-y-2">
+                      <Link href="#" className="block px-4 py-3 text-[#eeeeee] hover:bg-[#505050]">
                         Submenu Item 1
                       </Link>
-                      <Link href="#" className="block px-4 py-2 text-[#eeeeee] hover:bg-[#333]">
+                      <Link href="#" className="block px-4 py-3  text-[#eeeeee] hover:bg-[#505050]">
                         Submenu Item 2
                       </Link>
-                      <Link href="#" className="block px-4 py-2 text-[#eeeeee] hover:bg-[#333]">
+                      <Link href="#" className="block px-4 py-3  text-[#eeeeee] hover:bg-[#505050]">
                         Submenu Item 3
                       </Link>
                     </div>

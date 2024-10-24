@@ -1,16 +1,18 @@
+import heroImageUrl from "@/public/assets/HeroPreview.png"
 export const placeholderData = {
   // NAVIGATION BAR
   companyName: "SHOGHI",
   navItems: [
     { label: "About", href: "/about", hasSubmenu: true },
     { label: "Products", href: "/products", hasSubmenu: true },
-    { label: "Media Space", href: "/media-space" },
-    { label: "Careers", href: "/careers" },
+    // { label: "Media Space", href: "/media-space" },
+    // { label: "Careers", href: "/careers" },
     { label: "Support", href: "/support" },
     { label: "Reach Us", href: "/contact" },
   ],
 
   //HERO SECTION
+  heroImageUrl,
   heroVideoUrl: "https://cdn.pixabay.com/video/2022/12/10/142363-780562112_large.mp4",
   heroTitle: "Empowering Intelligence-Driven Defense Systems",
   heroSubtitle: "Innovative solutions for integrated electronic defense technologies",
@@ -51,6 +53,7 @@ export const placeholderData = {
   // GLOBAL PRESENCE SECTION
   globalPresence: {
     title: "Global Presence",
+    image : "https://placehold.jp/400x400.png",
     stats: [
       { value: "72+", label: "Countries Global Presence" },
       { value: "450+", label: "Satisfied Customers" },
