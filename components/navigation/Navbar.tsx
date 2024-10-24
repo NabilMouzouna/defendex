@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronRight, ChevronDown, Menu, X } from 'lucide-react';
-import { placeholderData } from '@/lib/data/placeholder';
+import { placeholderData } from '@/lib/data/landing-page/placeholder';
 import { navVariants, menuItemVariants, submenuVariants } from '@/lib/animations/variants';
 
 export const Navbar = () => {

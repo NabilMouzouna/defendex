@@ -1,4 +1,3 @@
-import heroImageUrl from "@/public/assets/HeroPreview.png"
 export const placeholderData = {
   // NAVIGATION BAR
   companyName: "SHOGHI",
@@ -12,7 +11,6 @@ export const placeholderData = {
   ],
 
   //HERO SECTION
-  heroImageUrl,
   heroVideoUrl: "https://cdn.pixabay.com/video/2022/12/10/142363-780562112_large.mp4",
   heroTitle: "Empowering Intelligence-Driven Defense Systems",
   heroSubtitle: "Innovative solutions for integrated electronic defense technologies",

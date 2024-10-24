@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Products as ProductsList } from '@/lib/data/productsList';
+import { Products as ProductsList } from '@/lib/data/landing-page/productsList';
 import { scaleIn, staggerContainer } from '@/lib/animations/variants';
 
 export const Products = () => {

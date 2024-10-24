@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Brain, Scale, Lightbulb } from 'lucide-react';
-import { placeholderData } from '@/lib/data/placeholder';
+import { placeholderData } from '@/lib/data/landing-page/placeholder';
 import { fadeInUp, staggerContainer } from '@/lib/animations/variants';
 
 const iconMap = {

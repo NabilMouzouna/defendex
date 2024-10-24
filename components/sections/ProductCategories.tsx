@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { categories } from "@/lib/data/categoriesList"
+import { categories } from "@/lib/data/products-page/categoriesList"
 
 
 
@@ -37,7 +37,7 @@ const CategoryCard = ({ category, index }: { category: typeof categories[0], ind
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: capIndex * 0.05 }}
             >
-              <Link href={`/products/${category.id}/${capIndex}`}>
+              <Link href={`/products/product1`}>
                 <motion.span
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
