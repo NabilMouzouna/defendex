@@ -57,15 +57,23 @@ const CategoryCard = ({ category, index }: { category: typeof categories[0], ind
 export function ProductCategories() {
   return (
     <div className="min-h-screen bg-gray-100 py-5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center text-gray-900 mb-12"
+          className="text-4xl font-bold text-center text-gray-900 mb-8"
         >
           Products & Capabilities
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center text-gray-900 mb-12"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloremque repellat, debitis animi at explicabo officiis. Ad totam tenetur illo.
+        </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((category, index) => (
             <CategoryCard key={category.id} category={category} index={index} />
