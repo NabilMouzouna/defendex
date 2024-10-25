@@ -37,7 +37,7 @@ const CategoryCard = ({ category, index }: { category: typeof categories[0], ind
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: capIndex * 0.05 }}
             >
-              <Link href={`/products/product1`}>
+              <Link href={`/products/${capability.replace(" ","-")}`}>
                 <motion.span
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
