@@ -1,6 +1,6 @@
 export const placeholderData = {
   // NAVIGATION BAR
-  companyName: "SHOGHI",
+  companyName: "Defendex",
   navItems: [
     { label: "About", href: "/about"},
     { label: "Products", href: "/products", hasSubmenu: true },
